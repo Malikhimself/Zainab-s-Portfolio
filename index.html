@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zainab · Content Creator & Social Media Manager</title>
+  <meta name="description" content="Portfolio of a creative content creator and social media manager specializing in engaging digital content, brand storytelling, and audience growth strategies." />
+  <meta property="og:title" content="Zainab · Content Creator & Social Media Manager" />
+  <meta property="og:description" content="Crafting stories that connect brands with audiences." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let preference = 'system';
+
+      try {
+        const savedPreference = localStorage.getItem('portfolio-theme');
+        if (savedPreference === 'light' || savedPreference === 'dark') {
+          preference = savedPreference;
+        }
+      } catch (error) {
+        console.warn('Unable to read the saved theme preference.', error);
+      }
+
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.dataset.themePreference = preference;
+      root.dataset.theme = preference === 'system' ? systemTheme : preference;
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">Z<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Work</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" />
+        </svg>
+      </button>
+      <a href="#contact" class="btn-nav" id="btn-nav-cta">Let's Talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#portfolio" class="mobile-link">Work</a></li>
+      <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-particles" id="hero-particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Projects
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-line">Crafting Stories</span>
+        <span class="hero-title-line gradient-text">That Connect.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Content Creator &amp; Social Media Manager turning ideas into scroll-stopping digital moments that grow brands and build communities.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary" id="btn-hero-portfolio">View My Work</a>
+        <a href="#contact" class="btn-ghost" id="btn-hero-contact">Get In Touch</a>
+      </div>
+
+      <div class="hero-socials">
+        <!-- PLACEHOLDER: Replace href="#" with your actual social media profile links -->
+        <a href="#" class="social-pill" id="social-instagram" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+        <a href="#" class="social-pill" id="social-tiktok" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/></svg>
+          TikTok
+        </a>
+        <a href="#" class="social-pill" id="social-youtube" aria-label="YouTube" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="hero-image-ring"></div>
+      <img src="IMG_5819.JPG.jpeg" alt="Profile photo" class="hero-photo" />
+
+      <div class="hero-float-card card-1">
+        <span class="float-icon">📈</span>
+        <div>
+          <strong>500K+</strong>
+          <small>Followers Grown</small>
+        </div>
+      </div>
+      <div class="hero-float-card card-2">
+        <span class="float-icon">🎬</span>
+        <div>
+          <strong>200+</strong>
+          <small>Videos Created</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media">
+          <!-- PLACEHOLDER: Replace with your about/secondary photo
+               <img src="about-photo.jpg" alt="About me" class="about-photo" /> -->
+          <div class="about-photo-placeholder" id="about-photo-placeholder">
+            <div class="placeholder-inner">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <p>Photo / Image Here</p>
+              <span>e.g. a candid or working shot</span>
+            </div>
+          </div>
+
+          <div class="about-badge-float">
+            <span>🏆</span>
+            <div>
+              <strong>3+ Years</strong>
+              <small>of Experience</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Behind the Content<br /><span class="gradient-text">Is a Real Story</span></h2>
+          <p class="about-desc">
+            Hey there! I'm a passionate content creator and social media strategist with a knack for turning brand visions into vibrant digital experiences. I blend creativity with data-driven strategy to build authentic communities that actually engage.
+          </p>
+          <p class="about-desc">
+            Whether it's crafting a viral TikTok, scripting a YouTube deep-dive, or building a full Instagram aesthetic — I make every post intentional and every story unforgettable.
+          </p>
+
+          <div class="skills-tags">
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Video Editing</span>
+            <span class="tag">Copywriting</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">Brand Identity</span>
+            <span class="tag">Reels &amp; Shorts</span>
+            <span class="tag">Community Management</span>
+            <span class="tag">UGC</span>
+          </div>
+
+          <a href="#contact" class="btn-primary" id="btn-about-cta">Work With Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" id="stat-followers">
+          <span class="stat-number" data-target="500">0</span><span class="stat-unit">K+</span>
+          <p>Followers Grown</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item" id="stat-clients">
+          <span class="stat-number" data-target="40">0</span><span class="stat-unit">+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item" id="stat-videos">
+          <span class="stat-number" data-target="200">0</span><span class="stat-unit">+</span>
+          <p>Videos Produced</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item" id="stat-views">
+          <span class="stat-number" data-target="10">0</span><span class="stat-unit">M+</span>
+          <p>Total Views</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">Services That <span class="gradient-text">Make an Impact</span></h2>
+        <p class="section-sub">From strategy to execution — I've got your content covered.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" id="service-content-creation">
+          <div class="service-icon">🎬</div>
+          <h3>Content Creation</h3>
+          <p>Short-form videos, Reels, TikToks, and YouTube content crafted to captivate your audience and drive engagement.</p>
+          <ul class="service-list">
+            <li>Script writing &amp; storyboarding</li>
+            <li>Video shooting &amp; editing</li>
+            <li>Thumbnail &amp; cover design</li>
+          </ul>
+        </div>
+
+        <div class="service-card featured" id="service-social-media">
+          <div class="service-icon">📱</div>
+          <div class="featured-badge">Most Popular</div>
+          <h3>Social Media Management</h3>
+          <p>Full management of your social channels — consistent posting, community building, and growth strategy.</p>
+          <ul class="service-list">
+            <li>Content calendar planning</li>
+            <li>Daily posting &amp; scheduling</li>
+            <li>Engagement &amp; community growth</li>
+            <li>Analytics reporting</li>
+          </ul>
+        </div>
+
+        <div class="service-card" id="service-brand-strategy">
+          <div class="service-icon">✨</div>
+          <h3>Brand Strategy</h3>
+          <p>Define your voice, aesthetic, and brand identity to create a cohesive digital presence that resonates.</p>
+          <ul class="service-list">
+            <li>Brand audit &amp; positioning</li>
+            <li>Tone of voice guidelines</li>
+            <li>Visual content direction</li>
+          </ul>
+        </div>
+
+        <div class="service-card" id="service-ugc">
+          <div class="service-icon">🤝</div>
+          <h3>UGC &amp; Collaborations</h3>
+          <p>Authentic user-generated content and influencer-style content for brand partnerships and product launches.</p>
+          <ul class="service-list">
+            <li>Product reviews &amp; unboxings</li>
+            <li>Brand deals &amp; sponsorships</li>
+            <li>Campaign content packages</li>
+          </ul>
+        </div>
+
+        <div class="service-card" id="service-copywriting">
+          <div class="service-icon">✍️</div>
+          <h3>Copywriting</h3>
+          <p>Captions, bios, email newsletters, and long-form content that sounds like you but works like a strategy.</p>
+          <ul class="service-list">
+            <li>Social media captions</li>
+            <li>Blog &amp; newsletter writing</li>
+            <li>Ad copy &amp; CTA writing</li>
+          </ul>
+        </div>
+
+        <div class="service-card" id="service-analytics">
+          <div class="service-icon">📊</div>
+          <h3>Analytics &amp; Growth</h3>
+          <p>Deep-dive into your metrics to identify what's working, what's not, and how to scale your reach.</p>
+          <ul class="service-list">
+            <li>Monthly performance reports</li>
+            <li>A/B content testing</li>
+            <li>Growth roadmap consulting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">My Work</div>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">A selection of campaigns, content, and creative work.</p>
+      </div>
+
+      <div class="portfolio-filter" id="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="brand">Branding</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolio-grid">
+
+        <!-- PROJECT CARD 1 - Video -->
+        <div class="portfolio-card" data-category="video" id="project-1">
+          <!-- PLACEHOLDER: Replace .portfolio-thumb.placeholder-thumb with:
+               <div class="portfolio-thumb">
+                 <img src="project1-thumb.jpg" alt="Brand Campaign Video" />
+                 <a href="YOUR_VIDEO_LINK" class="portfolio-play-btn" target="_blank">...</a>
+               </div> -->
+          <div class="portfolio-thumb placeholder-thumb">
+            <div class="thumb-placeholder-inner">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><polygon points="10,8 16,12 10,16"/></svg>
+              <span>Video Thumbnail</span>
+            </div>
+            <a href="#" class="portfolio-play-btn" id="project-1-link" target="_blank" rel="noopener" aria-label="Watch video">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Video</span>
+            <h3>Brand Campaign Video</h3>
+            <p>A cinematic product showcase for a lifestyle brand — scripted, filmed, and edited end-to-end.</p>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 2 - Social Media -->
+        <div class="portfolio-card tall" data-category="social" id="project-2">
+          <div class="portfolio-thumb placeholder-thumb">
+            <div class="thumb-placeholder-inner">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Feed Image</span>
+            </div>
+            <a href="#" class="portfolio-overlay-link" id="project-2-link" target="_blank" rel="noopener">
+              <span>View Project →</span>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Social Media</span>
+            <h3>Instagram Feed Redesign</h3>
+            <p>Full aesthetic overhaul and content strategy that grew engagement by 300% in 60 days.</p>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 3 - Branding -->
+        <div class="portfolio-card" data-category="brand" id="project-3">
+          <div class="portfolio-thumb placeholder-thumb">
+            <div class="thumb-placeholder-inner">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              <span>Brand Visual</span>
+            </div>
+            <a href="#" class="portfolio-overlay-link" id="project-3-link" target="_blank" rel="noopener">
+              <span>View Project →</span>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Branding</span>
+            <h3>Personal Brand Identity</h3>
+            <p>Defined the visual identity and tone of voice for an up-and-coming lifestyle influencer.</p>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 4 - Video -->
+        <div class="portfolio-card" data-category="video" id="project-4">
+          <div class="portfolio-thumb placeholder-thumb">
+            <div class="thumb-placeholder-inner">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><polygon points="10,8 16,12 10,16"/></svg>
+              <span>Video Thumbnail</span>
+            </div>
+            <a href="#" class="portfolio-play-btn" id="project-4-link" target="_blank" rel="noopener" aria-label="Watch video">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Video</span>
+            <h3>TikTok Series — Behind the Scenes</h3>
+            <p>A 12-part BTS series that amassed 2M+ views and built a loyal community from scratch.</p>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 5 - Social Media -->
+        <div class="portfolio-card tall" data-category="social" id="project-5">
+          <div class="portfolio-thumb placeholder-thumb">
+            <div class="thumb-placeholder-inner">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              <span>Social Content</span>
+            </div>
+            <a href="#" class="portfolio-overlay-link" id="project-5-link" target="_blank" rel="noopener">
+              <span>View Project →</span>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Social Media</span>
+            <h3>Twitter / X Growth Campaign</h3>
+            <p>Strategic content plan that drove 50K new followers in a single campaign cycle.</p>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 6 - Branding -->
+        <div class="portfolio-card" data-category="brand" id="project-6">
+          <div class="portfolio-thumb placeholder-thumb">
+            <div class="thumb-placeholder-inner">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Case Study Visual</span>
+            </div>
+            <a href="#" class="portfolio-overlay-link" id="project-6-link" target="_blank" rel="noopener">
+              <span>View Project →</span>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Branding</span>
+            <h3>Startup Launch Campaign</h3>
+            <p>End-to-end social presence setup for a tech startup's market debut — 0 to 20K followers in 30 days.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PLACEHOLDER: Embed your featured showreel / YouTube / TikTok reel below.
+           Replace the video-embed-placeholder div with:
+           <iframe width="100%" height="500" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+             title="My Showreel" frameborder="0" allowfullscreen class="video-embed"></iframe> -->
+      <div class="featured-video-section" id="featured-video-section">
+        <div class="section-label" style="text-align:center; margin-bottom:1rem;">Featured Reel</div>
+        <div class="video-embed-placeholder" id="video-embed-placeholder">
+          <div class="video-placeholder-inner">
+            <div class="video-play-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <h3>Your Showreel / Featured Video</h3>
+            <p>Replace this with a YouTube embed, Vimeo player, or a video file.<br />
+            Example: <code>&lt;iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" ...&gt;&lt;/iframe&gt;</code></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Kind Words</div>
+        <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+      </div>
+
+      <div class="testimonials-track-wrap">
+        <div class="testimonials-track" id="testimonials-track">
+
+          <div class="testimonial-card" id="testimonial-1">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Working with her was a game-changer. Our Instagram went from 2K to 50K in just 3 months. The content quality was unlike anything we'd seen before."</p>
+            <div class="testimonial-author">
+              <!-- PLACEHOLDER: Replace author-avatar-placeholder with a real <img> tag -->
+              <div class="author-avatar-placeholder" aria-label="Client photo placeholder"></div>
+              <div>
+                <strong>Sarah M.</strong>
+                <span>CEO, Bloom Beauty Co.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="testimonial-2">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The strategy she built for our TikTok channel was insanely effective. One video hit 1M views organically. Absolutely brilliant creator."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar-placeholder" aria-label="Client photo placeholder"></div>
+              <div>
+                <strong>James K.</strong>
+                <span>Founder, FitLife Brand</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="testimonial-3">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Professional, creative, and incredibly responsive. She understood our brand voice immediately and delivered content that felt authentically us."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar-placeholder" aria-label="Client photo placeholder"></div>
+              <div>
+                <strong>Amara T.</strong>
+                <span>Marketing Director, Nuve Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="testimonial-4">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"She doesn't just post content — she builds communities. Our engagement rate tripled and the quality of our audience genuinely improved."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar-placeholder" aria-label="Client photo placeholder"></div>
+              <div>
+                <strong>David R.</strong>
+                <span>Owner, The Local Table</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="track-controls">
+          <button class="track-btn" id="track-prev" aria-label="Previous">&#8249;</button>
+          <div class="track-dots" id="track-dots">
+            <span class="track-dot active" data-index="0"></span>
+            <span class="track-dot" data-index="1"></span>
+            <span class="track-dot" data-index="2"></span>
+            <span class="track-dot" data-index="3"></span>
+          </div>
+          <button class="track-btn" id="track-next" aria-label="Next">&#8250;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLATFORMS ===================== -->
+  <section id="platforms" class="platforms section">
+    <div class="container">
+      <p class="platforms-label">Platforms I Create For</p>
+      <div class="platforms-row">
+        <div class="platform-item">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </div>
+        <div class="platform-item">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/></svg>
+          TikTok
+        </div>
+        <div class="platform-item">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </div>
+        <div class="platform-item">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </div>
+        <div class="platform-item">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </div>
+        <div class="platform-item">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 5.905zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Let's Create<br /><span class="gradient-text">Something Great</span></h2>
+          <p class="contact-desc">Whether you have a project in mind or just want to say hi — my inbox is always open. I typically respond within 24 hours.</p>
+
+          <div class="contact-details">
+            <!-- PLACEHOLDER: Replace your@email.com with your actual email -->
+            <a href="mailto:your@email.com" class="contact-detail-item" id="contact-email">
+              <div class="contact-detail-icon">&#9993;&#65039;</div>
+              <div>
+                <strong>Email</strong>
+                <span>your@email.com</span>
+              </div>
+            </a>
+            <!-- PLACEHOLDER: Replace href="#" with your Instagram URL and @yourhandle with your actual handle -->
+            <a href="#" class="contact-detail-item" id="contact-instagram-link" target="_blank" rel="noopener">
+              <div class="contact-detail-icon">📸</div>
+              <div>
+                <strong>Instagram</strong>
+                <span>@yourhandle</span>
+              </div>
+            </a>
+            <!-- PLACEHOLDER: Replace href="#" with your TikTok URL and @yourhandle with your actual handle -->
+            <a href="#" class="contact-detail-item" id="contact-tiktok-link" target="_blank" rel="noopener">
+              <div class="contact-detail-icon">🎵</div>
+              <div>
+                <strong>TikTok</strong>
+                <span>@yourhandle</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="e.g. Sarah Johnson" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email-input">Email Address</label>
+            <input type="email" id="contact-email-input" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-service">Service Interested In</label>
+            <select id="contact-service" name="service">
+              <option value="">Select a service...</option>
+              <option value="content-creation">Content Creation</option>
+              <option value="social-media">Social Media Management</option>
+              <option value="brand-strategy">Brand Strategy</option>
+              <option value="ugc">UGC &amp; Collaborations</option>
+              <option value="copywriting">Copywriting</option>
+              <option value="analytics">Analytics &amp; Growth</option>
+              <option value="other">Something Else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project, goals, or any questions..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width" id="btn-contact-submit">Send Message ✨</button>
+          <p class="form-note">I'll get back to you within 24 hours 🚀</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo">Z<span class="dot">.</span></a>
+          <p>Content Creator &amp; Social Media Manager crafting stories that connect.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-socials">
+          <!-- PLACEHOLDER: Replace href="#" with your actual social media links -->
+          <a href="#" class="footer-social-icon" id="footer-instagram" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="footer-social-icon" id="footer-tiktok" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/></svg>
+          </a>
+          <a href="#" class="footer-social-icon" id="footer-youtube" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&#169; 2025 All rights reserved.</p>
+        <p>Designed with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
