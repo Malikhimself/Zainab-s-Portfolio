@@ -1036,6 +1036,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: 0 4px 24px rgba(183,110,240,0.5);
   transition: var(--transition);
 }
+
+.portfolio-play-btn::before {
+  content: '';
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 13px solid currentColor;
+}
+
 .portfolio-play-btn:hover {
   transform: translate(-50%, -50%) scale(1.15);
   background: var(--clr-primary);
